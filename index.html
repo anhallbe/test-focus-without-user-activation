@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>focus-without-user-activation</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <main>
+      <button>Test</button>
+    </main>
+
+    <script>
+      document.querySelector('button').focus();
+    </script>
+
+    <style>
+      button:focus {
+        border: 1px solid red;
+      }
+    </style>
+  </body>
+</html>
