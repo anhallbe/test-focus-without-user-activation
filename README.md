@@ -1,0 +1,1 @@
+# test-focus-without-user-activation
