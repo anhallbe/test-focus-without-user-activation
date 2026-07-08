@@ -8,10 +8,21 @@
   <body>
     <main>
       <button>Test</button>
+      <p></p>
     </main>
 
     <script>
-      document.querySelector('button').focus();
+      const button = document.querySelector('button');
+      const info = document.querySelector("p");
+
+      button.addEventListener("focus", () => {
+        info.textContent = "Button has focus";
+      });
+      button.addEventListener("blur", () => {
+        info.textContent = "Button lost focus";
+      });
+
+      button.focus();
     </script>
 
     <style>
