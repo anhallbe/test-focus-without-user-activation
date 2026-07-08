@@ -34,6 +34,11 @@
       setTimeout(() => {
         log("Focusing now")
         button.focus();
+        setTimeout(() => {
+          if (document.activeElement !== button) {
+            log("Button was NOT focused.")
+          }
+        }, 5);
       }, 5000);
     </script>
 
