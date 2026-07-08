@@ -15,19 +15,26 @@
       const button = document.querySelector('button');
       const info = document.querySelector("p");
 
+      function log(text) {
+        console.log("[test-focus-without-user-activation]", text)
+        info.textContent += `\n${text}`;
+      }
+
       button.addEventListener("focus", () => {
-        info.textContent += "\nButton has focus";
+        log("Button has focus");
       });
       button.addEventListener("blur", () => {
-        info.textContent += "\nButton lost focus";
+        log("Button lost focus");
       });
       button.addEventListener("click", () => {
-        info.textContent += "\nButton was clicked";
+        log("Button was clicked");
       });
 
+      log("Will programmatically focus in 5 seconds...")
       setTimeout(() => {
+        log("Focusing now")
         button.focus();
-      }, 1000);
+      }, 5000);
     </script>
 
     <style>
