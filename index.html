@@ -16,10 +16,13 @@
       const info = document.querySelector("p");
 
       button.addEventListener("focus", () => {
-        info.textContent = "Button has focus";
+        info.textContent += "\nButton has focus";
       });
       button.addEventListener("blur", () => {
-        info.textContent = "Button lost focus";
+        info.textContent += "\nButton lost focus";
+      });
+      button.addEventListener("click", () => {
+        info.textContent += "\nButton was clicked";
       });
 
       button.focus();
